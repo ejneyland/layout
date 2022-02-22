@@ -1,0 +1,51 @@
+div {
+    position: relative;
+    /* display: inline; */
+}
+div:nth-of-type(2) {
+    position: sticky;
+    top: 15px;
+    padding: 1em;
+    /* em is a standard proportion of the font size */
+    /* padding: 15px; */
+    height: 50vh;
+    /* padding: 10px 20px 30px 40px; */
+    border: 2px orange solid;
+    /* border-width: 2px;
+    border-color: orange;
+    border-style: solid; */
+    /* margin: auto; */
+}
+span {
+    display: block;
+    color: aqua;
+}
+body {
+    font-size: 20px;
+    width: 300px;
+    padding-left: 50px;
+}
+img {
+    width: 100%;
+    height: 40vh;
+}
+img:nth-of-type(2) {
+    border: 2px solid red;
+    position: relative;
+    /* position: fixed; */
+    /* fixed position is anchored to the browser window, good for navbars */
+    /* position: absolute; anchored to the page */
+    /* position: relative; */
+    top: 20px;
+    left: 40px;
+    /* When the position is set as 'relative', even though the element has moved it hasnt effected the layout of the surrounding elements. In terms of layout, it sits where it was. It has only visually moved and therfore position: relative */
+    /* Even though it has visually moved out of position, the image after it hasnt moved at all. As far as the browser is concerned, moving the element relative to where it was hasnt changed the layout of the surrounding elements  */
+    /* With position set as 'absolute' the image has been removed from the flow of the elements so the surrounding elements re-organise to fill the empty space. The image doesnt exist there anymore, position is no longer relative to where it was.. its in a different place now. Absolute positioninng makes it relative to its parent <body> */
+}
+img:nth-of-type(3) {
+    position: relative;
+    border: 4px solid blue;
+    z-index: 50;
+    /* z-index will not work on a static element. position must be relative */
+}
+
